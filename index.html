@@ -18,6 +18,9 @@
     <link rel="stylesheet" href="css/animate.css"> 
     <link rel="stylesheet" href="css/prettyPhoto.css"> 
     <link rel="stylesheet" href="css/style.css"> 
+    <script src = "mathscribe/jquery-1.4.3.js"></script>
+    <script src = "mathscribe/jqmath-etc-0.4.6.min.js" charset = "utf-8"></script>
+
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -482,95 +485,90 @@
 	<!-- section portfolio start -->
 
 	<section id="section-portfolio" class="section-padding">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 text-center wow fadeInUp">
-					<div class="section-heading">
-						<h2 class="heading-title">portfolio</h2>
-						<p>Lorem ipsum dolor sit amet, ea doming epicuri iudicabit nam, te usu virtute placerat. Purto brute disputando cu est, eam dicam soluta ei. Vel dicam vivendo accusata ei, cum ne periculis molestiae pri. </p>
-					</div>
-				</div>
-			</div>
+	
 
-			<div class="row">
-				
-				<div class="col-md-4 col-sm-4">
-					<div class="portfolio-box">
-						<img src="images/portfolio/portfolio_pic1.jpg" alt="" class="img-responsive">
-						<div class="image-overlay text-center">
-							<a href="images/portfolio/portfolio_pic1.jpg" data-rel="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
-						</div>
-					</div>
-				</div> <!-- col-md-4 end -->
-				<div class="col-md-4 col-sm-4">
-					<div class="portfolio-box">
-						<img src="images/portfolio/portfolio_pic2.jpg" alt="" class="img-responsive">
-						<div class="image-overlay text-center">
-							<a href="images/portfolio/portfolio_pic2.jpg" data-rel="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
-						</div>
-					</div>
-				</div> <!-- col-md-4 end 3step-->
-				<div class="col-md-4 col-sm-4">
-					<div class="portfolio-box">
-						<img src="images/portfolio/portfolio_pic3.jpg" alt="" class="img-responsive">
-						<div class="image-overlay text-center">
-							<a href="images/portfolio/portfolio_pic3.jpg" data-rel="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
-						</div>
-					</div>
-				</div> <!-- col-md-4 end -->
-				<div class="clearfix"></div>
-				<div class="col-md-4 col-sm-4">
-					<div class="portfolio-box">
-						<img src="images/portfolio/portfolio_pic4.jpg" alt="" class="img-responsive">
-						<div class="image-overlay text-center">
-							<a href="images/portfolio/portfolio_pic4.jpg" data-rel="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
-						</div>
-					</div>
-				</div> <!-- col-md-4 end -->
-				<div class="col-md-4 col-sm-4">
-					<div class="portfolio-box">
-						<img src="images/portfolio/portfolio_pic5.jpg" alt="" class="img-responsive">
-						<div class="image-overlay text-center">
-							<a href="images/portfolioportfolio_pic5.jpg" data-rel="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
-						</div>
-					</div>
-				</div> <!-- col-md-4 end 6 step --> 
+<div class="container">
+<div class="row">
+    <div class="col-md-12 wow fadeInLeft">
+                    
+                    <div class="resume-inner">
+                    <h2 class="heading-title">Bases ortonormales y proyección</h2>
+                        Una base ortonormal es una base ortogonal, en la cual la norma de cada elemento que la compone es unitaria. <br>
+                        Por lo tanto, para obtener una base ortonormal es necesario obtener una base ortogonal. <br>
+                        Para poder obtener una base ortogonal es necesario realizar el proceso de <b>Gram-Schmidt</b> <br>. 
 
-				<div class="col-md-4 col-sm-4">
-					<div class="portfolio-box">
-						<img src="images/portfolio/portfolio_pic6.jpg" alt="" class="img-responsive">
-						<div class="image-overlay text-center">
-							<a href="images/portfolio/portfolio_pic6.jpg" data-rel="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
-						</div>
-					</div>
-				</div> <!-- col-md-4 end -->
-				<div class="clearfix"></div>
-				<div class="col-md-4 col-sm-4">
-					<div class="portfolio-box">
-						<img src="images/portfolio/portfolio_pic7.jpg" alt="" class="img-responsive">
-						<div class="image-overlay text-center">
-							<a href="images/portfolio/portfolio_pic7.jpg" data-rel="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
-						</div>
-					</div>
-				</div> <!-- col-md-4 end -->
-				<div class="col-md-4 col-sm-4">
-					<div class="portfolio-box">
-						<img src="images/portfolio/portfolio_pic8.jpg" alt="" class="img-responsive">
-						<div class="image-overlay text-center">
-							<a href="images/portfolio/portfolio_pic8.jpg" data-rel="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
-						</div>
-					</div>
-				</div> <!-- col-md-4 end -->
-				<div class="col-md-4 col-sm-4">
-					<div class="portfolio-box">
-						<img src="images/portfolio/portfolio_pic9.jpg" alt="" class="img-responsive">
-						<div class="image-overlay text-center">
-							<a href="images/portfolio/portfolio_pic9.jpg" data-rel="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
-						</div>
-					</div>
-				</div> <!-- col-md-4 end -->
-			</div>
-		</div>
+                        Este proceso se resumen en que para obtener una base ortogonal k de un vector k, se tiene que seguir el siguiente procedimiento:
+
+                        <center>$$u_k = v_k - \sum_{j=1}^{k-1} Proy_{v_k}(u_k)
+                        $$</center>
+
+                        La proyección de un vector sobre otro se obtiene de la siguiente forma: 
+
+                        <center> $$Proy_{v_k}(u_k) = \frac{<\v_k, u_j>}{<\u_j, u_j>} u_j$$</center>
+
+                        Por lo tanto, para obtener una base usando el proceso de ortogonalización, se resumen de la siguiente forma:
+
+                        <center>  $${u_k = v_k - \sum_{j=1}^{k-1}\frac{<\v_k, u_j>}{<\u_j, u_j>} u_j}$$</center>
+
+
+                    </div>
+                </div>
+</div>
+    <div class="row">
+
+        <div class="timeline-centered">
+
+        
+
+        <div class="resume-inner">
+                    <h2 class="heading-title">Bases ortonormales</h2>
+                        
+                    Ahora que se ha entendido las bases ortogonales, para obtener una base ortonormal a partir de una base ortogonal, se tiene que normalizar. Esto se hace de la siguiente manera:
+
+                    <center>$$w_1 = \frac{u_1}{|u_1|}$$</center>
+
+                    La base $w_1$ representa una base ortonormal, su obtención es la división entre la base ortogonal $u_1$ y el módulo de esta base ortogonal.
+
+                    </div>
+
+        <article class="timeline-entry">
+
+            <div class="timeline-entry-inner">
+
+                <div class="timeline-icon bg-success">
+                    <i class="entypo-feather"></i>
+                </div>
+
+                <div class="timeline-label">
+                    <h3 class="resume-title">USO DE RECURSO GEOGEBRA:</h3>  
+                    <p>Se puede visualizar el Proceso de Ortogonalización de Gram-Schmidt de mejor forma con el siguiente recurso de Geogebra:</p>
+                </div>
+            </div>
+
+        </article>
+
+        <article class="timeline-entry">
+
+            <div class="timeline-entry-inner">
+
+                <div class="timeline-icon bg-secondary">
+                    <i class="entypo-suitcase"></i>
+                </div>
+
+                <div class="timeline-label">
+                   <h3 class="resume-title">USO DE RECURSO PYTHON</h3>
+                     <p>Para un mejor entendimiento, se realizó un programa en Python en donde el usuario ingresa 3 vectores, y se muestran las bases ortogonales con el proceso de Gram-Schmidt y también luego se muestran las bases ortonormales. Los vectores ingresados, las bases ortogonales y ortonormales se muestran con gráficos en 3d usando una librería de este lenguaje para su gráfica:.</p>
+                </div>
+            </div>
+
+        </article>
+
+
+       
+    </div>
+</div>
+     
+
 	</section>
 	<!-- section portfolio endt -->
 
