@@ -423,14 +423,56 @@
         
 
         <div class="resume-inner">
-                    <h2 class="heading-title">Bases ortonormales</h2>
-                        
-                    Ahora que se ha entendido las bases ortogonales, para obtener una base ortonormal a partir de una base ortogonal, se tiene que normalizar. Esto se hace de la siguiente manera:
+                    <h2 class="heading-title">Espacios con Producto Interno</h2>
+					n algun momento cuando estudiabas matemática se vio cómo se podían multiplicar dos vectores en  𝑛  para obtener un escalar. Este producto escalar se denomina también producto interno. Otros espacios vectoriales tienen productos internos definidos. Antes de ofrecer una definición general, se observa que en  𝑛  el producto interno de dos vectores es un escalar real.
 
-                    <center>$$w_1 = \frac{u_1}{|u_1|}$$</center>
+					Def: Un espacio vectorial complejo V, se le llama Espacio Vectorial con producto Interno, si para cada par ordenado de vectores (u, v)  ∈  V,  ∃  un unico numero complejo  <𝑢,𝑣> , llamado producto interno, tal que si:
 
-                    La base $w_1$ representa una base ortonormal, su obtención es la división entre la base ortogonal $u_1$ y el módulo de esta base ortogonal.
+					- 𝑢,𝑣,𝑤∈𝑉, 
+					- 𝛼∈ℝ 
+					Para comprobar que realmente es Producto Interno tiene que cumplir la siguientes propiedades:
 
+					1. (𝑣,𝑣)≥0 
+					2. (𝑣,𝑣)=0  si y solo si  𝑣=0  **
+					3. (𝑢,𝑣+𝑤)=(𝑢,𝑣)+(𝑢,𝑤) 
+					4. (𝑢+𝑣,𝑤)=(𝑢,𝑤)+(𝑣,𝑤) 
+					5. (𝑢,𝑣)=(𝑣,𝑢)⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯ 
+					6. (𝛼𝑢,𝑣)=𝛼(𝑢,𝑣) 
+					7. (𝑢,𝛼𝑣)=𝛼⎯⎯⎯(𝑢,𝑣)
+                    
+					Ejemplos de espacios de productos internos incluyen:
+
+					Los números reales  ℝ , donde el producto interno está dado por
+
+						<center><𝑥,𝑦>=𝑥𝑦</center> 
+
+					El espacio euclidiano  ℝ𝑛 , donde el producto interno viene dado por el producto escalar
+
+						<center><(𝑥1,𝑥2,...,𝑥𝑛),(𝑦1,𝑦2,...,𝑦𝑛)>   =𝑥1𝑦1+𝑥2𝑦2+...𝑥𝑛 𝑦𝑛</center>> 
+
+					El espacio vectorial de funciones reales cuyo dominio es un intervalo cerrado [a, b] con producto interno
+
+						<𝑓,𝑔>=∫𝑏𝑎(𝑓𝑔)⋅𝑑𝑥 
+
+					El espacio vectorial de  𝕄𝑛𝑥𝑛(ℝ)  con producto interno
+
+						<𝐴,𝐵>=𝑡𝑟𝑎𝑧𝑎(𝐵𝑇⋅𝐴) ,    donde  𝐴,𝐵∈𝑀𝑛𝑥𝑛
+						Ejemplo: Producto Interno en 𝑅3
+						𝑣=3,2,1 , 𝑢=4,2,−7
+						
+						𝐻𝑎𝑙𝑙𝑎𝑟<𝑣,𝑣>
+						
+						<𝑣,𝑣>=3⋅3+2⋅2+1⋅1=14
+						
+						𝐻𝑎𝑙𝑙𝑎𝑟<𝑣,𝑤>
+						
+						<𝑣,𝑤>=3⋅4+2⋅2+1⋅(−7)=9
+						
+						𝐻𝑎𝑙𝑙𝑎𝑟<𝑣,𝑤+𝑣>
+						
+						𝑤+𝑣={4+3,2+2,1−7} = {7,4,−6}
+						
+						<𝑣,𝑤+𝑣>=3⋅7+2⋅4+1⋅(−6)=23
                     </div>
 
         <article class="timeline-entry">
@@ -443,8 +485,11 @@
 
                 <div class="timeline-label">
                     <h3 class="resume-title">USO DE RECURSO GEOGEBRA:</h3>  
-                    <p>Se puede visualizar el Proceso de Ortogonalización de Gram-Schmidt de mejor forma con el siguiente recurso de Geogebra:</p>
-                </div>
+                    <p>Se puede visualizar el producto interno de funciones reales, delimitado por [a,b] con el siguiente recurso de Geogebra:</p>
+                
+					<iframe scrolling="no" title="Ejemplos en C[a,b] Producto Interno" src="https://www.geogebra.org/material/iframe/id/b3mfwsak/width/1906/height/871/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/false/ld/false/sdz/true/ctl/false" width="1906px" height="871px" style="border:0px;"> </iframe>
+				</div>
+
             </div>
 
         </article>
@@ -459,7 +504,7 @@
 
                 <div class="timeline-label">
                    <h3 class="resume-title">USO DE RECURSO PYTHON</h3>
-                     <p>Para un mejor entendimiento, se realizó un programa en Python en donde el usuario ingresa 3 vectores, y se muestran las bases ortogonales con el proceso de Gram-Schmidt y también luego se muestran las bases ortonormales. Los vectores ingresados, las bases ortogonales y ortonormales se muestran con gráficos en 3d usando una librería de este lenguaje para su gráfica:.</p>
+                     <p>Para un mejor entendimiento, se realizó un programa en Python en donde el usuario ingresa 2 vectores en $$\mathbb{R}^3$$, y se muestra su producto interno:</p>
                 </div>
             </div>
 
