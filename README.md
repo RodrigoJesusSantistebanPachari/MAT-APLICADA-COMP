@@ -9,5 +9,10 @@ El presente es un portafolio en el que se pueden visualizar algunos de los temas
 
 * Proceso de Ortogonalización y Ortonormalización de Gram-Schmidt
 
-* Espacios con Producto Interno<
+* Espacios con Producto Interno
 
+# TECNOLOGÍAS USADAS
+
+* HTML
+
+* CSS
