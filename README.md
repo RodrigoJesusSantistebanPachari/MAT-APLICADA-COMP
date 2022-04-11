@@ -11,8 +11,13 @@ El presente es un portafolio en el que se pueden visualizar algunos de los temas
 
 * Espacios con Producto Interno
 
+
 # TECNOLOGÍAS USADAS
 
 * HTML
 
 * CSS
+
+# CONTENIDO
+
+El contenido consiste en teoría sobre el tema y además de ejemplos interactivos usando Python, Geogebra y Colab
